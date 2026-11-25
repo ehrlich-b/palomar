@@ -1,0 +1,7 @@
+Antihydra has no semilinear inductive safety invariant
+Copyright 2026 Bryan Ehrlich
+Licensed under the Apache License, Version 2.0.
+
+The arithmetic model follows Shawn Ligocki's “BB(6) is Hard (Antihydra).”
+Mathlib supplies the definitions and theorems for semilinear and
+Presburger-definable sets. Attribution and dependency details are in README.md.

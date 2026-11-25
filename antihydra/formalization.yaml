@@ -1,0 +1,76 @@
+version: v0.4
+
+project:
+  name: "Antihydra has no semilinear inductive safety invariant"
+  authors:
+    - "Bryan Ehrlich"
+  responsible_maintainers:
+    - "Bryan Ehrlich"
+  license: "Apache-2.0"
+  description: >-
+    In the shifted Antihydra recurrence on natural-number pairs, each successful
+    round sends x to floor(3x/2). Even x earns two units of credit. Odd x spends
+    one unit and halts at zero credit. From (8, 0), no semilinear set containing
+    the seed admits a successful successor within the set for every member.
+    The proof also gives a quantitative horizontal-ray bound and the
+    Presburger-definable corollary. The seed's halting behavior is open in this
+    work, and priority is unclaimed.
+
+classification:
+  arxiv: [cs.LO]
+  msc2020: ["03D10"]
+
+automation:
+  methods:
+    - method: agent
+      tool_setup: >-
+        The research assignment credits the Astra reasoning tool for the argument.
+        OpenAI Codex with GPT-6.2 Sol assisted with the antecedent Lean proof.
+        Codex prepared this package and offline prescreen under Bryan Ehrlich's direction.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "OpenAI GPT-6.1 Terra via Codex (antecedent proof)"
+    - "OpenAI Codex (package and offline prescreen)"
+  notes: >-
+    The antecedent received a separate agent review. The package uses kernel
+    elaboration and an axiom audit. Independent human peer review remains
+    outstanding.
+
+sources:
+  - title: "Antihydra has no semilinear inductive safety invariant"
+    type: original-proof
+    authors:
+      - "Bryan Ehrlich"
+    relationship: other
+  - title: "BB(6) is Hard (Antihydra)"
+    type: article
+    authors:
+      - "Shawn Ligocki"
+    identifier: "https://www.sligocki.com/2024/07/06/bb-6-2-is-hard.html"
+    relationship: background
+    note: "Source of the shifted recurrence. Reuse license unverified."
+  - title: "Antihydra machine reduction in google-deepmind/cryptids"
+    type: formalization
+    authors:
+      - "Google LLC"
+    identifier: "https://github.com/google-deepmind/cryptids/tree/3647718b5df22e1a61462dec0376bd204526285a"
+    relationship: background
+    note: "Apache-2.0. Cited for blank-tape halting equivalence to the symbolic system."
+  - title: "Semigroups, Presburger Formulas, and Languages"
+    type: paper
+    authors:
+      - "Seymour Ginsburg"
+      - "Edwin H. Spanier"
+    relationship: background
+    note: >-
+      Pacific Journal of Mathematics 16 (1966), 285–296. Classical
+      Presburger-semilinear characterization. Reuse license unverified.
+  - title: "Mathlib's Presburger definability theory"
+    type: formalization
+    authors:
+      - "The Mathlib Contributors"
+    identifier: "https://github.com/leanprover-community/mathlib4/tree/56a005855ea17e0b0958f73ec801ae140b0a1679"
+    relationship: background
+    note: "Apache-2.0. Supplies semilinearity and the definability equivalence."
